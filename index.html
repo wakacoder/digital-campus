@@ -1,0 +1,110 @@
+
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#171a1f" />
+    <meta name="description" content="Интерактивная 3D-карта школы" />
+    <title>Digital Campus — Architectural Studio</title>
+  </head>
+
+  <body>
+    <div id="app"></div>
+
+    <header class="hud">
+      <div class="eyebrow">
+        <span class="brand-mark"></span>
+        DIGITAL CAMPUS <span class="eyebrow-separator">/</span> SYSTEM
+      </div>
+
+      <h1>Цифровой кампус</h1>
+      <div class="subtitle">Интерактивная 3D-карта школы</div>
+
+      <div class="status">
+        <span class="status-indicator"></span>
+        3D ENGINE <span class="status-state">ONLINE</span>
+      </div>
+    </header>
+
+    <section class="campus-search" aria-label="Поиск помещения">
+      <label for="room-search">ПОИСК ПОМЕЩЕНИЯ</label>
+
+      <div class="search-row">
+        <input
+          id="room-search"
+          type="text"
+          placeholder="Номер кабинета..."
+          autocomplete="off"
+        />
+        <button id="search-button" type="button">Найти</button>
+      </div>
+
+      <div id="search-message" aria-live="polite">
+        Введите номер кабинета
+      </div>
+    </section>
+
+    <div class="hint">
+      <span>ЛКМ</span> вращение
+      <i></i>
+      <span>Колёсико</span> масштаб
+      <i></i>
+      <span>Клик</span> помещение
+    </div>
+
+    <aside
+      id="room-info"
+      class="room-panel"
+      aria-label="Информация о помещении"
+    >
+      <div class="panel-top">
+        <div>
+          <div class="panel-label">ROOM INFORMATION</div>
+          <div class="panel-caption">Информация о кабинете</div>
+        </div>
+
+        <button id="close-room" type="button" aria-label="Закрыть">
+          ×
+        </button>
+      </div>
+
+      <div class="room-number" id="room-number">---</div>
+      <div class="room-name" id="room-name">Выберите помещение</div>
+
+      <div class="room-status" id="room-status">
+        ОЖИДАНИЕ ВЫБОРА
+      </div>
+
+      <div class="info-divider"></div>
+
+      <div class="info-row">
+        <span>Преподаватель</span>
+        <strong id="room-teacher">—</strong>
+      </div>
+
+      <div class="info-row">
+        <span>Группа</span>
+        <strong id="room-group">—</strong>
+      </div>
+
+      <div class="info-row">
+        <span>Занятие</span>
+        <strong id="room-subject">—</strong>
+      </div>
+
+      <div class="panel-footer">
+        <span>DC</span>
+        DIGITAL CAMPUS
+        <span class="footer-version">3D / MAP</span>
+      </div>
+    </aside>
+
+    <div class="made-by">
+      <span class="made-by-label">DESIGNED & BUILT BY</span>
+      <span class="made-by-name">WAKA</span>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
